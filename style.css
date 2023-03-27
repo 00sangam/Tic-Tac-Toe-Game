@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #fecaca;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+#gameboard {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 3px solid black;
+}
+#info {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  margin-top: 5px;
+}
+.square {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: 10px solid green;
+  box-sizing: border-box;
+}
+.cross {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cross:before,
+.cross:after {
+  position: absolute;
+  content: " ";
+  height: 60px;
+  width: 2px;
+  background-color: #333;
+  border: 10px solid red;
+}
+.cross:before {
+  transform: rotate(45deg);
+}
+.cross:after {
+  transform: rotate(-45deg);
+}
